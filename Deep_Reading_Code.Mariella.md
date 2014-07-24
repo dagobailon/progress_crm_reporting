@@ -22,24 +22,24 @@ from dateutil.parser import parse
 	<-------------?????------------------->
 	<---- why this date is absolutely beyond me, multiple sources have this date ---->
 
-
 from django.db import IntegrityError
-	-Exception raised when the relational integrity of the database is affected, e.g. a foreign key check fails, 		duplicate key, etc.
+	-Gives you an error when your key doesn't work, e.g. a foreign key check fails, duplicate key, etc.
 
 from django.core.exceptions import ImproperlyConfigured
 	-The ImproperlyConfigured exception is raised when Django is somehow improperly configured – for example, if 		a value in settings.py is incorrect or unparseable.
 
 from django.contrib.contenttypes.models import ContentType
-	-A content type is a reusable collection of metadata (columns), workflow, behavior, and other settings for a 		category of items or documents in a document library 
+	-A content type is a reusable collection of metadata (columns), workflow, behavior, and other settings for a 		category of items or documents in a document library.. the skeleton of the data 
 
 from actionkit import ActionKit
-	<-------------?????------------------->
+	basically allows you to import data from the actionkit library ... python wrapper to allow us to interact 		with the actionkit API... basically the translator  
 
 from progress_crm.adapters.base_adapter import BaseAdapter
-	-<-------------?????------------------->
+	-this is calling on the base_adapter so that you can use the method 
+
 from progress_crm.models import (Person, EmailAddress, PersonEmailAddress,
-								 PostalAddress, PersonPostalAddress, List,
-								 ListItem, Donation, Form, Submission)
+				PostalAddress, PersonPostalAddress, List,
+				ListItem, Donation, Form, Submission)
 	-This imports your models from the progress.crm database and puts it in the specified format, as listed.
 	
 
