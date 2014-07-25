@@ -1,13 +1,15 @@
-Writing a code "deep reading" memo
+ActionKit Adapter Deep Read memo
 ==================================
-
 
 Section 1: What does this code DO?
 ----------------------------------
 Try to explain in as clear language as possible:
-- One sentence: the overall purpose of the code
-- 3-5 subpoint sentences - functionalities in this code that let it meet its overall function (that you decribed in the first sentence)
-- Within your bullet points you MUST articulate any kinds of data that are inputted or outputted by this file
+- One sentence: the overall purpose of the code is connect ActionKit CRM, pull in the data sets, convert, clean up and transfer the data to ProgressCRM. 
+
+Overall fuction step by step 
+The connection is made through using the ActionKit API with access requirements such as organization's URL, username and password. 
+Only at a rate of 100 entries at a time. Next the methods "get_people" or "get_event" makes the request to import JSON objects from ActionKit data models, data then goes through a matching process and uses the string method of .format to convert objects like person identifies ie 'id' from ActionKit to ProgressCRM. Each method processes each entry by checking if the object already exists in ProgressCRM and if not to create that entry and saves. 
+
 
 For example, 
 
