@@ -1,14 +1,26 @@
-Client Meetings
+Client Meetings Executive Summary
+==================================
 
 These meetings were conducted to obtain end user requirements. Below is the outline of the agenda and corresponding notes for each meeting. 
 
 The primary goal for these meetings is to obtain the necessary requirements for ProgressCRM. Many of the these individuals we interviewed hold positions that manage data that track their impact with the communitites they serve. 
 
-Main Findings: 
-	- Many would like a way to track social media impact. What platform do the constituents move to action from? 
-	- Tracking a user's engagment with the emails they sent 
+Challenges: 
+-----------
+	- A few organizations felt like the CRMs platform had multiple fuctions that were not useful and crowded the screen.
+	-There are no current capabilities to track social media preanswer a questions:
+	 	What platform do the constituents move to action from? 
+	 	Are their online members continuing to repost articles or take action 	
+	- Fragmented tracking of events. In action kit, there is a separation between the count of how many people RSVPed for an event to how many attended. 
+
+Needs: 
+------
+	-Users have a high demand for a simple platform that can cross connect a person to many interactions on various CRMs. 
+	-Deeper collection of Social Media engagement. 
+	-User friendly reporting feature. 
 	
 Agenda:
+=======
 Intros (5 mins) 
 Goals:
 	Better understanding daily use of the CRM
@@ -32,10 +44,11 @@ The Mountain Ahead: (10 mins)
 Hopes and Dreams: (10 mins) 
 	If you could build it, what would it have? 
 	How would you change it to be more user friendly?
+Notes:
+======
 
-====================================================================
 New Organizing Institute
-====================================================================
+------------------------
 Date: 7/18/2014
 
 Attendees:
@@ -161,9 +174,9 @@ Top Reports:
 	AND co.user_id = cu.id
 	);
 
-====================================================================
+
 18 Million Rising
-====================================================================
+-----------------
 Date: 7/18/2014
 
 Attendees:
@@ -215,9 +228,9 @@ Top Reports generated:
 
 	It'd also be great to have a report on hand that shows you the number of users who have taken an action that wasn't their first in the past week and the past month.
 
-====================================================================
+
 United We Dream
-===================================================================
+----------------
 
 7/22/2013
 Attendance: 
