@@ -1,0 +1,16 @@
+div.nav_button {
+    height: 30px;
+    width: 150px;
+    margin:10px;
+    background-color: #7f0ee8;
+    border: 2px solid;
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+    ;
+}
+
+#nav_button:hover{
+    color: white;
+    background-color: orange;
+}

@@ -1,0 +1,6 @@
+div.nav_button {
+    margin: 10px;
+    height: 100px;
+    width: 300px;
+    background-color: #7F0EE8
+    }

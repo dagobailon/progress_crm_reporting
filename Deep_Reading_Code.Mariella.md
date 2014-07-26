@@ -47,7 +47,7 @@ from progress_crm.models import (Person, EmailAddress, PersonEmailAddress,
 
 Section 3: What other files within this app does this depend on?
 -----------------------------------
-e.g. ActionKit draws on BaseAdapter.py so that...
+e.g. ActionKit draws on BaseAdapter.py to clean data r
 
 [Fill in this section]
 
