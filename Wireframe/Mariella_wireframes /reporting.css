@@ -3,11 +3,11 @@ div.nav_button {
     width: 150px;
     margin:10px;
     background-color: #7f0ee8;
-    border: 2px solid;
-    display: inline-block;
     text-align: center;
     padding-top: 10px;
-    ;
+    vertical-align: middle;
+    
+    
 }
 
 #nav_button:hover{
