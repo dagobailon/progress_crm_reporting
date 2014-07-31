@@ -59,7 +59,7 @@ WSGI_APPLICATION = 'reporting.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'salsa',
+        'NAME': 'reporting',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': '127.0.0.1',
