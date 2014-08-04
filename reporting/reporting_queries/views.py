@@ -3,17 +3,31 @@ from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.db import connection 
+from django.views.generic.base import TemplateView
+from reporting_queries.models import FakeReport
+#from reporting_queries.models import Person, Query #need to add more models
 
-from reporting_queries.models import Person, Query #need to add more models
 
-# Create your views here
-.
 class HomePageView(TemplateView):
     template = "index.html"
 
     def get(self, request, **kwargs):
-        return render(request, self.template)
+        fake_reports = FakeReport.objects.all()
+        context = { 
+            'queries':fake_reports
+        }
+        return render(request, self.template, context)
 
+class ResultsView(TemplateView):
+    template = "results.html"
+
+    def get(self, request, **kwargs):
+        report_id = kwargs.get('id')
+        query = FakeReport.objects.get(id = report_id)
+        context = {
+            'query':query
+        }
+        return render(request, self.template, context)
 
 #     def get_query(request):
 #         query = Query.object.all() #This will bring up all of the queries model

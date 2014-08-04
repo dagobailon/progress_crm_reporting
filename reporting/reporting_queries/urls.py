@@ -1,9 +1,8 @@
 from django.conf.urls import patterns, url
-from reporting_queries import views
 
+from reporting_queries.views import HomePageView, ResultsView
 
 urlpatterns = patterns('',
-    url(r'^$', HomePageView, name = 'home'),
-    url(r'^(?:reporting_queries/)?results/(?P<id>[0-9]+)$', ResultsView.as_view(), name ='results'),
-
+    url(r'^$', HomePageView.as_view(), name = 'home'),
+    url(r'^results/(?P<id>[0-9]+)$', ResultsView.as_view(), name ='results'),
     )
