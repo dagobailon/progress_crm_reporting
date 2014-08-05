@@ -7,7 +7,6 @@ from django.views.generic.base import TemplateView
 
 from reporting_queries.models import Person, Query #need to add more models
 
-
 class HomePageView(TemplateView):
     template = "index.html"
 
