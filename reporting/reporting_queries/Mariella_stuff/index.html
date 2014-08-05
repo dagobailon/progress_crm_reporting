@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>
+            Progress CRM 
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="reporting.css">
+
+
+    </head>
+
+    <body>
+    <div class="banner"
+        <img src= url: (/home/mariellapaulino/Desktop/together1.jpg)>
+    </div>
+
+<br>
+<br>
+<br>
+    <h1> 
+    Most Popular Queries
+    </h1>
+        <p>   
+
+        {% for query in queries %}
+                <div class="nav_button"><button><a href = '/results/{{query.id}}'> {{query.name}}</a></button></div>
+                 {% endfor %} 
+        <br>
+            <div class="nav_button"> How Many People </div>
+            <div class="nav_button"> From What State </div>
+            <div class="nav_button">How Long Ago Signed Up </div>
+    </body>
+
+</html>

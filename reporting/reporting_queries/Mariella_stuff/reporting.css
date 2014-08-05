@@ -1,0 +1,55 @@
+html *
+{
+    color: #000;
+    font-family: Arial;
+}
+
+body {
+    background-image: url(file:///home/mariellapaulino/Desktop/hands.jpg); 
+    background-size: cover;
+}
+
+.banner {
+    padding: 0;
+    float: right;
+    margin: 0;
+}
+
+
+.h1 {
+    text-indent: left;
+    margin: 0px;
+}
+
+div.nav_button{
+    height: 100px;
+    width: 500px;
+    margin:5px;
+    margin-top: 0px;
+    background-color:#F0F0F0;
+    text-align: center;
+    padding-top: 15px;
+    vertical-align: middle;
+    border-radius: 35px;
+    border-style: solid;
+    border-color: black;
+    float: left;
+    font-weight: bold; 
+    font-size: 36; 
+}
+
+.nav_button:hover {
+    color: white;
+    background-color: #7f0ee8;
+    font-size: 36;
+    font-weight: bold; 
+}
+
+.together:hover {
+    color: white;
+    background-color: #7f0ee8;
+    font-size: 200;
+}
+
+
+
