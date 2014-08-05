@@ -5,13 +5,9 @@
     </head>
     <body>
         {% for query in queries %}
-            <button><a href = '/results/{{query.id}}'> {{query.text}}</a></button>
+            <button><a href = '/results/{{query.id}}'> {{query.name}}</a></button>
 
             {% endfor %}
-
-<!--         <button><a href = '/results/1'>ONE </a></button>
-        <button>TWO</button>
-        <button>THREE</button> -->
 
 
 

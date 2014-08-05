@@ -4,17 +4,17 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.db import connection 
 from django.views.generic.base import TemplateView
-from reporting_queries.models import FakeReport
-#from reporting_queries.models import Person, Query #need to add more models
+
+from reporting_queries.models import Person, Query #need to add more models
 
 
 class HomePageView(TemplateView):
     template = "index.html"
 
     def get(self, request, **kwargs):
-        fake_reports = FakeReport.objects.all()
+        queries = Query.objects.all()
         context = { 
-            'queries':fake_reports
+            'queries':queries
         }
         return render(request, self.template, context)
 
@@ -23,7 +23,7 @@ class ResultsView(TemplateView):
 
     def get(self, request, **kwargs):
         report_id = kwargs.get('id')
-        query = FakeReport.objects.get(id = report_id)
+        query = Query.objects.get(id = report_id)
         context = {
             'query':query
         }
