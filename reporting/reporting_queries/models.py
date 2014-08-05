@@ -545,9 +545,6 @@ class PhoneNumber(models.Model):
 
         self.number = self.number.replace(r'[^0-9]', '')
 
-    def __unicode__(self):
-        return self.number
-
 class PersonPhoneNumber(models.Model):
     person = models.ForeignKey(Person)
     phone_number = models.ForeignKey(PhoneNumber)
@@ -556,8 +553,6 @@ class PersonPhoneNumber(models.Model):
 
     created_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
-
-    
 
     class Meta:
         unique_together = ['person', 'phone_number']
@@ -582,3 +577,4 @@ class Query(models.Model):
     query = models.CharField(max_length=500)  
     name = models.CharField(max_length=120)
     description = models.TextField()
+
