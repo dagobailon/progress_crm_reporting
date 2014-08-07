@@ -4,11 +4,17 @@
 
     </head>
     <body>
-        
-        {% for result in results %}        
-        <p> {{result}}</p>
+        <table>
+        {% for row in results|slice:":10" %}        
+            <tr>
+            {% for column in row %}
+                <td>
+                {{ column|title }}
+                </td>    
+            {% endfor %}
+            <tr>
         {% endfor %}
-
+        </table>
 
     </body>
 
