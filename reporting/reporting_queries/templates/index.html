@@ -3,15 +3,15 @@
         <title>
             Progress CRM 
         </title>
-
-        <link rel="stylesheet" type="text/css" href="reporting.css">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{%static 'reporting.css'%}">
 
 
     </head>
 
     <body>
     <div class="banner"
-        <img src= url: (/home/mariellapaulino/Desktop/together1.jpg)>
+        <img src= "{% static 'reporting_queries/hands.jpg' %}">
     </div>
 
 <br>
@@ -23,12 +23,10 @@
         <p>   
 
         {% for query in queries %}
-                <div class="nav_button"><button><a href = '/results/{{query.id}}'> {{query.name}}</a></button></div>
+        <div class="nav_button" onClick="location.href='/results/{{query.id}}'">  {{query.name}}</div>
                  {% endfor %} 
         <br>
-            <div class="nav_button"> How Many People </div>
-            <div class="nav_button"> From What State </div>
-            <div class="nav_button">How Long Ago Signed Up </div>
+
     </body>
 
 </html>

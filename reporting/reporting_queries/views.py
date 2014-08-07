@@ -5,26 +5,34 @@ from django.http import HttpResponseRedirect
 from django.db import connection 
 from django.views.generic.base import TemplateView
 
-from reporting_queries.models import Person, Query #need to add more models
+from reporting_queries.models import * #need to add more models
 
 class HomePageView(TemplateView):
+
     template = "index.html"
 
     def get(self, request, **kwargs):
         queries = Query.objects.all()
         context = { 
-            'queries':queries
+            'queries':queries,
         }
         return render(request, self.template, context)
+
+
+
 
 class ResultsView(TemplateView):
     template = "results.html"
 
     def get(self, request, **kwargs):
         report_id = kwargs.get('id')
-        query = Query.objects.get(id = report_id)
+        desired_query = Query.objects.get(id = report_id)
+        raw_sql = desired_query.query
+        # We'll need to figure out how to have it query the correct table (not every query is 
+        # about PostalAddresses.
+        results = Person.objects.raw(raw_sql)
         context = {
-            'query':query
+            'results':results
         }
         return render(request, self.template, context)
 

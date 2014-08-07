@@ -5,8 +5,9 @@
     </head>
     <body>
         
-        <p> {{query.id}} {{query.query}}</p>
-
+        {% for result in results %}        
+        <p> {{result}}</p>
+        {% endfor %}
 
 
     </body>
