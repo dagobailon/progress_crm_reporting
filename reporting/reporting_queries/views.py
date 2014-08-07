@@ -30,7 +30,9 @@ class ResultsView(TemplateView):
         raw_sql = desired_query.query
         # We'll need to figure out how to have it query the correct table (not every query is 
         # about PostalAddresses.
-        results = Person.objects.raw(raw_sql)
+        cursor = connection.cursor()
+        cursor.execute(raw_sql)
+        results = cursor.fetchall()
         context = {
             'results':results
         }
