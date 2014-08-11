@@ -25,8 +25,6 @@ class ResultsView(TemplateView):
         report_id = kwargs.get('id')
         desired_query = Query.objects.get(id = report_id)
         raw_sql = desired_query.query
-        # We'll need to figure out how to have it query the correct table (not every query is 
-        # about PostalAddresses.
         cursor = connection.cursor()
         cursor.execute(raw_sql)
         results = cursor.fetchall()
@@ -44,8 +42,6 @@ class ResultCsvView(TemplateView):
         report_id = kwargs.get('id')
         desired_query = Query.objects.get(id = report_id)
         raw_sql = desired_query.query
-        # We'll need to figure out how to have it query the correct table (not every query is 
-        # about PostalAddresses.
         cursor = connection.cursor()
         cursor.execute(raw_sql)
         results = cursor.fetchall()
