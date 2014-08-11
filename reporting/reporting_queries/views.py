@@ -42,6 +42,7 @@ class ResultsView(TemplateView):
         return render(request, self.template, context)
 
 class ResultCsvView(TemplateView):
+# This function executes rawSQL, and returns results    
     def get(self, request, **kwargs):
         report_id = kwargs.get('id')
         desired_query = Query.objects.get(id = report_id)
@@ -51,6 +52,7 @@ class ResultCsvView(TemplateView):
         cursor = connection.cursor()
         cursor.execute(raw_sql)
         results = cursor.fetchall()
+#  This line is to get header for csv
         headers = [desc[0] for desc in cursor.description]
         context = {
             'results':results,
@@ -58,7 +60,7 @@ class ResultCsvView(TemplateView):
         }
         return self.export_csv(headers, request, results)
     
-
+# This function exports and writes the CSV
     def export_csv(self, headers, request, results):
         import csv
         from django.utils.encoding import smart_str
