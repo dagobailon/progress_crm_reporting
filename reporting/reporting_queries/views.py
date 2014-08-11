@@ -18,9 +18,6 @@ class HomePageView(TemplateView):
         }
         return render(request, self.template, context)
 
-
-
-
 class ResultsView(TemplateView):
     template = "results.html"
 
