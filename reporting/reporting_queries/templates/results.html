@@ -1,17 +1,20 @@
+<!DOCTYPE html>
 <html>
     <head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> 
-
-</script>
+        {% load staticfiles %}
+         <link rel="stylesheet" type="text/css" href="{%static 'results.css'%}">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> 
+        </script>
     </head>
     <body>
+        <h1> {{ query.name }}</h1>
         <table>
             <tr>{% for header in headers %}
-                <td> {{header}}
-                </td>
+                <th> {{header}}
+                </th>
                 {% endfor %}
                 </tr>
-        {% for row in results|slice:":10" %}        
+        {% for row in results %}        
             <tr>
             {% for column in row %}
                     <td>
@@ -21,7 +24,7 @@
             </tr>
         {% endfor %}
         </table>
-       <a href='/export/{{report_id}}'>  <button> Export CSV
+       <a href='/export/{{report_id}}'>  <button class = "exportbtn"> Export CSV
     </button></a>
     </body>
 

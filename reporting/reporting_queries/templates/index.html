@@ -8,25 +8,35 @@
 
 
     </head>
-
+`
     <body>
-    <div class="banner"
-        <img src= "{% static 'reporting_queries/hands.jpg' %}">
-    </div>
-
-<br>
-<br>
-<br>
+    <!-- div id="banner"></div> -->
+    {% load staticfiles %}
+  
+       
     <h1> 
-    Most Popular Queries
+    Welcome to ProgressCRM
     </h1>
-        <p>   
 
-        {% for query in queries %}
-        <div class="nav_button" onClick="location.href='/results/{{query.id}}'">  {{query.name}}</div>
-                 {% endfor %} 
-        <br>
+    <h2>
+    Refer to options you would like included in admin page!
+    </h2>
 
+    <br>
+    <br>
+
+    <p>
+    {% for query in queries %}
+    <center><div class="nav_button" onClick="location.href='/results/{{query.id}}'">  {{query.name}}
+        <div class="description"> {{query.description}} </div>
+    </div>
+    </center>
+
+
+        {% endfor %} 
+    <br>
+
+    </p>
     </body>
 
 </html>

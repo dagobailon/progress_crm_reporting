@@ -1,54 +1,67 @@
-html *
+html
 {
     color: #000;
     font-family: Arial;
 }
 
-body {
-    background-image: url(hands.jpg); 
-    background-size: cover;
-}
+/*#banner {*/
+    /*background-image: url(official_hands.jpg);*/
+   /* background-color: #AFBF45;
+    background-size: 1500px 200px; 
+    height: 200px;
+    float: center;
+    position: relative;*/
+/*}*/
 
-.banner {
-    padding: 0;
-    float: right;
-    margin: 0;
-}
-
-
-.h1 {
-    text-indent: left;
-    margin: 0px;
-}
-
-div.nav_button{
+h1 {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 40px;
+    background-color: #AFBF45;
+    background-size: 2000px 200px; 
     height: 100px;
-    width: 500px;
-    margin:5px;
-    margin-top: 0px;
-    background-color:#F0F0F0;
+    color: white;
+    padding-top: 40px; 
+}
+
+h2 {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: gray;
+    
+}
+
+div.nav_button {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 165px;
+    width: 300px;
+    background-color:white;
     text-align: center;
     padding-top: 15px;
-    vertical-align: middle;
     border-radius: 35px;
     border-style: solid;
     border-color: black;
-    float: left;
     font-weight: bold; 
-    font-size: 36; 
+    font-size: 25;
+    padding-top: 30px;
+    
 }
 
 .nav_button:hover {
     color: white;
-    background-color: #7f0ee8;
-    font-size: 36;
-    font-weight: bold; 
+    background-color: #AFBF45;
+    font-size: 25;
+    font-weight: bold; `
 }
 
-.together:hover {
-    color: white;
-    background-color: #7f0ee8;
-    font-size: 200;
+.description {
+    font-size: 17;
+    margin: 0;
+    color: gray;
 }
 
 
