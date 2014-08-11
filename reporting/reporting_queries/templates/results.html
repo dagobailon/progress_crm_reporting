@@ -1,21 +1,28 @@
 <html>
     <head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> 
 
-
+</script>
     </head>
     <body>
         <table>
+            <tr>{% for header in headers %}
+                <td> {{header}}
+                </td>
+                {% endfor %}
+                </tr>
         {% for row in results|slice:":10" %}        
             <tr>
             {% for column in row %}
-                <td>
-                {{ column|title }}
-                </td>    
+                    <td>
+                        {{ column|title }}
+                    </td>   
             {% endfor %}
-            <tr>
+            </tr>
         {% endfor %}
         </table>
-
+       <a href='/export/{{report_id}}'>  <button> Export CSV
+    </button></a>
     </body>
 
 
