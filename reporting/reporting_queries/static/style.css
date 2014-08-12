@@ -1,0 +1,108 @@
+body {
+    font-family: helvetica;
+}
+.banner {
+    background-color: #AFBF45;
+    height: 200px;
+    width: 70%;
+    float: center;
+    margin-left: 275px;
+} 
+
+h1 {
+    text-align: right;
+    font-size: 50px;
+    height: 20%;
+    color: white;    
+    padding-top: 138px;
+    padding-right: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: gray;
+    font-size: 40px;
+    
+}
+
+div.nav_button {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    height: 10%;
+    width: 40%;
+    background-color:white;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 35px;
+    border-style: solid;
+    border-color: black;
+    font-weight: bold; 
+    font-size: 25;
+    
+}
+
+.nav_button:hover {
+    color: white;
+    background-color: #AFBF45;
+    font-size: 25;
+    font-weight: bold; `
+}
+
+.description {
+    font-size: 17;
+    margin: 0;
+    color: gray;
+}
+
+table {
+    border-collapse:collapse;
+    width: 40%;
+    margin: 1%;
+}
+
+th {
+    background-color: #a0b52c;
+    color: #ebebeb;
+    height: 20px;
+    vertical-align: bottom;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background: white;
+}
+tr:nth-child(odd){
+    background: #ebebeb;
+}
+
+td {
+    height: 20px;
+    vertical-align: bottom;
+    padding: 5px;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    font-family: helvetica;
+}
+
+.exportbtn {
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 13px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: helvetica;
+  color: white;
+  font-size: 18px;
+  background: #a0b52c;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 1%;
+}
+
+.exportbtn:hover {
+  background: #9da8aa;
+  text-decoration: none;
+}
+

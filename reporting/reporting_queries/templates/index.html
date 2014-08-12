@@ -1,42 +1,34 @@
 <html>
     <head>
         <title>
-            Progress CRM 
+            ProgressCRM 
         </title>
         {% load staticfiles %}
-        <link rel="stylesheet" type="text/css" href="{%static 'reporting.css'%}">
+        <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
 
 
     </head>
 `
     <body>
-    <!-- div id="banner"></div> -->
-    {% load staticfiles %}
-  
-       
-    <h1> 
-    Welcome to ProgressCRM
-    </h1>
-
-    <h2>
-    Refer to options you would like included in admin page!
-    </h2>
-
-    <br>
-    <br>
-
-    <p>
-    {% for query in queries %}
-    <center><div class="nav_button" onClick="location.href='/results/{{query.id}}'">  {{query.name}}
-        <div class="description"> {{query.description}} </div>
-    </div>
-    </center>
+        <div class = "banner">
+            <h1> 
+                ProgressCRM
+            </h1>
+        </div>
+            <h2>
+            Choose a Report:
+            </h2>
+        <p>
+        {% for query in queries %}
+        <center>
+            <div class="nav_button" onClick="location.href='/results/{{query.id}}'">  {{query.name}}
+            <div class="description"> {{query.description}} </div>
+            </div>
+        </center>
 
 
-        {% endfor %} 
-    <br>
-
-    </p>
+            {% endfor %} 
+        </p>
     </body>
 
 </html>
