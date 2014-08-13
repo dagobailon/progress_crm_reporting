@@ -22,15 +22,18 @@
        
       
         <center>
-            <form role = 'form' action = '.' method = 'post'>
+            <form class="add_query_form" role = 'form' action = '.' method = 'post'>
                 {% csrf_token %}
                 <input class="form" type="text" placeholder="Query Name" name = "name"><br>
                 <input class="form" type="text"placeholder="Description" name = "description"><br>
-                <input class="form" type="text" placeholder="SQL" name = "query">  </input>
-                <br>     
+                <textarea placeholder="SQL" class="SQLform" name = "query" ></textarea>
+                <br>  
+
                 <a href='/'>  <button class = "exportbtn" type = "submit" value = "OK"> Save </button></a>
             </form>
-                <a href='/'>  <button class = "exportbtn"> Cancel</button></a>
+            <a href='/'>  <button class = "cancelbtn"> Cancel</button></a>
+              
+            
         </center>
 
 
