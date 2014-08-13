@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            ProgressCRM 
+        </title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
+
+
+    </head>
+    <body>
+        <div class = "banner">
+            <h1> 
+                ProgressCRM
+            </h1>
+        </div>
+  
+            <h2>
+            Add New Query
+            </h2>
+
+       
+      
+        <center>
+            <form role = 'form' action = '.' method = 'post'>
+                {% csrf_token %}
+                <input class="form" type="text" placeholder="Query Name" name = "name"><br>
+                <input class="form" type="text"placeholder="Description" name = "description"><br>
+                <input class="form" type="text" placeholder="SQL" name = "query">  </input>
+                <br>     
+                <a href='/'>  <button class = "exportbtn" type = "submit" value = "OK"> Save </button></a>
+            </form>
+                <a href='/'>  <button class = "exportbtn"> Cancel</button></a>
+        </center>
+
+
+    </body>
+
+</html>
