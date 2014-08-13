@@ -14,6 +14,8 @@
                 ProgressCRM
             </h1>
         </div>
+            <a href='/add_query'>  <button class = "exportbtn"> Add Query
+    </button></a> 
             <h2>
             Choose a Report:
             </h2>
@@ -23,10 +25,13 @@
             <div class="nav_button" onClick="location.href='/results/{{query.id}}'">  {{query.name}}
             <div class="description"> {{query.description}} </div>
             </div>
+
         </center>
 
 
             {% endfor %} 
+                  <a href='/add_query'>  <button class = "exportbtn"> Add Query
+    </button></a> 
         </p>
     </body>
 

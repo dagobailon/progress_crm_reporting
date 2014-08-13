@@ -4,8 +4,11 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from django.db import connection 
 from django.views.generic.base import TemplateView
+from django.core.exceptions import ValidationError
+from django.template import RequestContext
 
 from reporting_queries.models import * #need to add more models
+from reporting_queries.forms import AddQueryForm
 
 class HomePageView(TemplateView):
 
@@ -66,4 +69,33 @@ class ResultCsvView(TemplateView):
             writer.writerow(obj)
         return response
         
-            
+class AddQueryView(TemplateView):
+    def get(self, request, **kwargs):
+        form = AddQueryForm()
+        template = "add_query.html"
+        return render(request, 'add_query.html', {'form' : form})
+
+    def post(self, request, **kwargs):
+        if request.method == 'POST':
+            form = AddQueryForm(request.POST)
+            if form.is_valid():
+                name = request.POST.get('name')
+                description = request.POST.get('description')
+                query = request.POST.get('query')
+                if name and description and query:
+                    q = Query(name = name, description = description, query = query)
+                    q.save()
+                return HttpResponseRedirect('/')
+            else:
+                print 'FAIL'
+        else:
+            form = AddQueryForm()
+            return render_to_respond(request, 'add_query.html', {'form' : form})
+
+
+        # if name and description and query:
+        #     q = Query(name = name, description = description, query = query)
+        #     q.save()
+        #     return HttpResponseRedirect('/')
+
+        # return render(request, self.template)
