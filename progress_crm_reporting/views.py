@@ -10,9 +10,9 @@ from django.views.generic.base import TemplateView
 from django.core.exceptions import ValidationError
 from django.template import RequestContext
 
-from reporting_queries.models import * 
+from .models import * 
 # * pulls all models from models.py
-from reporting_queries.forms import AddQueryForm
+from .forms import AddQueryForm
 
 
 
