@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- This is the pathway to the static files folder -->
         {% load staticfiles %}
          <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> 
         </script>
     </head>
     <body>
+        <!--The results page renders the data results from the SQL query and placed in a table -->
         <table>
-            <tr>{% for header in headers %}
+            <tr>{% for header in headers %} 
                 <th> {{header}}
+                    <!-- headers from the database is placed in the <th> tag-->
                 </th>
                 {% endfor %}
                 </tr>
         {% for row in results %}        
+            <!-- The for loops brings in the each entry string in a row -->
             <tr>
             {% for column in row %}
+            <!-- this for loop places every field into a cell  -->
                     <td>
                         {{ column|title }}
                     </td>   
@@ -23,10 +28,12 @@
             </tr>
         {% endfor %}
         </table>
-       <a href='/export/{{report_id}}'>  <button class = "exportbtn"> Export CSV
-    </button></a>
+       <a href='/export/{{report_id}}'>  <button class = "exportbtn"> Export CSV 
+    </button></a> 
+    <!-- The export button is connected to the report id that launches the csv export fuction -->
     <a href='/'>  <button class = "exportbtn"> Go Back
     </button></a>
+    <!-- This button returns to the index page -->
     </body>
 
 
