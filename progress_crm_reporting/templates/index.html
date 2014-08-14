@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            ProgressCRM 
+        </title>
+        {% load staticfiles %}
+        <!-- This is the pathway to the static file folder -->
+
+        <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
+    </head>
+    <body>
+        <div class = "banner"> 
+            <!-- The banner is the header at the top that contains the green block backgrond -->
+            <h1> 
+                ProgressCRM
+                <!-- the <h1> is wrapped within the div so that the text is included within the banner's background -->
+            </h1>
+        </div>
+
+            <a href='/add_query'>  <button class = "add_query"> Add Query
+    </button></a> 
+            <!-- This button adds new queries and is connected to the views/url that opens up the add_query.html  -->
+            <h2>
+            Choose a Report:
+            </h2>
+        <p>
+
+        {% for query in queries %}
+        <!-- This pulls from the SQL with information from the queries requested -->
+        
+        <center>
+            <div class="nav_button" onClick="location.href='/results/{{query.id}}'">  {{query.name}}
+            <!-- This pulls for the SQL the assigned name of the query -->
+            
+            <div class="description"> {{query.description}} </div>
+            <!-- This pulls from the query the assingned description of the query -->
+            </div>
+        </center>
+
+
+            {% endfor %} 
+            <!-- this tells Django the %for query loop is done -->
+                  <a href='/add_query'>  <button class = "add_query"> Add Query
+
+    </button></a> 
+        </p>
+    </body>
+
+</html>
