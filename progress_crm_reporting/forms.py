@@ -1,7 +1,7 @@
 #Section 1: Imports
 from django import forms
 from django.forms import ModelForm
-from reporting_queries.models import Query
+from .models import Query
 
 #Section 2: Forms
 class AddQueryForm(forms.Form):
