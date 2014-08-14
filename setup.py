@@ -8,5 +8,6 @@ setup(
     long_description='Progress CRM application to save frequently used queries, preview a report, export the report to a csv file enter and save a new query',
     install_requires= [
         'Django>=1.6.5',
+		'South',
     ],
 )
