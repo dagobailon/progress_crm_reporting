@@ -1,0 +1,1 @@
+from progress.crm.plugins import CRMDashboardModule

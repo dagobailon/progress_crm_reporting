@@ -1,14 +1,10 @@
-<html>
-    <head>
-        <title>
-            ProgressCRM 
-        </title>
-        {% load staticfiles %}
-        <!-- This is the pathway to the static file folder -->
+{% extends "admin_tools/dashboard/module.html" %}
 
+{% load staticfiles %}
+        <!-- This is the pathway to the static file folder -->
+{% block module_content %}
         <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
-    </head>
-    <body>
+
         <div class = "banner"> 
             <!-- The banner is the header at the top that contains the green block backgrond -->
             <h1> 
@@ -44,6 +40,4 @@
 
     </button></a> 
         </p>
-    </body>
-
-</html>
+{% endblock %}

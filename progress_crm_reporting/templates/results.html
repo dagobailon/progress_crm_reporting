@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- This is the pathway to the static files folder -->
-        {% load staticfiles %}
-         <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"> 
-        </script>
-    </head>
-    <body>
+
         <!--The results page renders the data results from the SQL query and placed in a table -->
         <table>
             <tr>{% for header in headers %} 
@@ -34,10 +25,3 @@
     <a href='/'>  <button class = "exportbtn"> Go Back
     </button></a>
     <!-- This button returns to the index page -->
-    </body>
-
-
-
-
-
-</html>
