@@ -110,6 +110,9 @@ class AddQueryView(TemplateView): #This view will render a form for the user to 
                 if name and description and query:
                     q = Query(name = name, description = description, query = query)
                     q.save()
+                    return HttpResponseRedirect('/')
+
+
             return render(request, 'add_query.html', {'form' : form})
             
 
