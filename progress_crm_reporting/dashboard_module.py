@@ -1,1 +1,1 @@
-from progress.crm.plugins import CRMDashboardModule
+from progress_crm.plugins import CRMDashboardModule
