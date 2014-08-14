@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-from reporting_queries.views import HomePageView, ResultsView, ResultCsvView, AddQueryView
+from .views import HomePageView, ResultsView, ResultCsvView, AddQueryView
 
 
 
