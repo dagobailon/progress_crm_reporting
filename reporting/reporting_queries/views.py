@@ -1,7 +1,7 @@
 #Section 1: Import tools
 #=======================
 
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
@@ -110,12 +110,12 @@ class AddQueryView(TemplateView): #This view will render a form for the user to 
                 if name and description and query:
                     q = Query(name = name, description = description, query = query)
                     q.save()
-            return HttpResponseRedirect('/')
+            return render(request, 'add_query.html', {'form' : form})
             
 
         else:
             form = AddQueryForm()
-            return render_to_respond(request, 'add_query.html', {'form' : form})
+            return render_to_response(request, 'add_query.html', {'form' : form})
         #Else will render the form without having to enter information
 
 
