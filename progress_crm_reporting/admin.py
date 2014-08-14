@@ -1,5 +1,5 @@
 from django.contrib import admin
-from reporting_queries.models import Person, PostalAddress, EmailAddress, PhoneNumber, Query, PersonPostalAddress, PersonEmailAddress, PersonPhoneNumber
+from .models import Query
 from django.http import HttpResponse
 
 # Register your models here.
