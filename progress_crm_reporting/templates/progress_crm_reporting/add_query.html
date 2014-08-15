@@ -19,7 +19,7 @@
         <button class = "exportbtn" type = "submit" value = "OK"> Save </button>
         <!-- this button submits entries into the database, however at this momeent, this button takes the user back to the home page while we create a feauture that will cause error messages when parts are left black or filled incorrectly-->
     </form>
-    <a href='/'>  <button class = "cancelbtn"> Cancel</button></a><!-- this button connects you back to the index.html-->
+    <a href="{% url "homepage_url" %}">  <button class = "cancelbtn"> Cancel</button></a><!-- this button connects you back to the index.html-->
       
     
 </center>
