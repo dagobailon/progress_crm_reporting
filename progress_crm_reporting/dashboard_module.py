@@ -1,4 +1,5 @@
 from progress_crm.plugins import CRMDashboardModule
+from .models import Query
 
 class CRMReportingModule(CRMDashboardModule):
     title = 'Reporting'

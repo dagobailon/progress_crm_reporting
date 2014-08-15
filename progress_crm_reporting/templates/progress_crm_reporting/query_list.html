@@ -1,0 +1,21 @@
+<!-- This button adds new queries and is connected to the views/url that opens up the add_query.html  -->
+<a href="{% url "add_query_url" %}"><button class = "add_query">Add Query</button></a> 
+    
+<h2>Choose a Report:</h2>
+
+<!-- This pulls from the SQL with information from the queries requested -->
+{% for query in queries %}
+
+<center>
+    <!-- This pulls for the SQL the assigned name of the query -->
+    <a href="{% url "results_url" id=query.id %}" class="nav_button">{{query.name}}
+    
+    <!-- This pulls from the query the assingned description of the query -->
+    <div class="description"> {{query.description}} </div>
+    </a>
+</center>
+
+<!-- this tells Django the %for query loop is done -->
+{% endfor %} 
+
+<a href='{% url "add_query_url" %}'><button class = "add_query">Add Query</button></a>

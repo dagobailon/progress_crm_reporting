@@ -1,0 +1,25 @@
+<!--The results page renders the data results from the SQL query and placed in a table -->
+<table>
+    <tr>
+        <!-- headers from the database is placed in the <th> tag-->
+        {% for header in headers %}
+        <th>{{header}}</th>
+        {% endfor %}
+    </tr>
+    
+    <!-- The for loops brings in the each entry string in a row -->
+    {% for row in results %}
+    <tr>
+        <!-- this for loop places every field into a cell  -->
+        {% for column in row %}
+        <td>{{ column|title }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- The export button is connected to the report id that launches the csv export fuction -->
+<a class="nojs" href="{% url "export_url" id=report_id %}"><button class = "exportbtn">Export CSV</button></a>
+
+<!-- This button returns to the index page -->
+<a href="{% url "homepage_url" %}"><button class="exportbtn">Go Back</button></a>

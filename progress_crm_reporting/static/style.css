@@ -1,21 +1,17 @@
 body {
     font-family: helvetica;
 }
+
 .banner {
     background-color: #AFBF45;
-    height: 200px;
-    width: 70%;
-    float: center;
-    margin-left: 210px;
-} 
+    height: 100px;
+}
 
 h1 {
     text-align: right;
     font-size: 50px;
-    height: 20%;
     color: white;    
-    padding-top: 138px;
-    padding-right: 15px;
+    padding: 15px;
     text-shadow: 4px 4px 8px #696969;
 }
 
@@ -26,18 +22,19 @@ h2 {
     
 }
 
-div.nav_button {
+.nav_button {
     margin-bottom: 20px;
     height: 11%;
     width: 40%;
     background-color:white;
     text-align: center;
-    padding-top: 15px;
+    padding: 15px;
     border-radius: 20px;
     border-style: solid;
     border-color: black;
     font-weight: bold; 
     font-size: 25;
+    display: block;
     
 }
 

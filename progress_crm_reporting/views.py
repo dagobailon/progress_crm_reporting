@@ -22,7 +22,7 @@ from .forms import AddQueryForm
 #This view renders the landing page and calls all queries saved in the database
 class HomePageView(TemplateView):
 #calling the html page in the templates 
-    template = "index.html"
+    template = "progress_crm_reporting/query_list.html"
 
     def get(self, request, **kwargs):
         queries = Query.objects.all()
@@ -33,7 +33,7 @@ class HomePageView(TemplateView):
 
 class ResultsView(TemplateView):
     #This fuction executes raw SQL and returns the data in the variable results
-    template = "results.html"
+    template = "progress_crm_reporting/results.html"
 
     def get(self, request, **kwargs):
         report_id = kwargs.get('id')
@@ -95,8 +95,7 @@ class AddQueryView(TemplateView): #This view will render a form for the user to 
     def get(self, request, **kwargs):
     # This method gets the AddQueryForm from forms.py
         form = AddQueryForm()
-        template = "add_query.html"
-        return render(request, 'add_query.html', {'form' : form})
+        return render(request, 'progress_crm_reporting/add_query.html', {'form' : form})
 
     def post(self, request, **kwargs):
     #This method allows the user to add raw SQL queries and description to the form 
@@ -110,8 +109,7 @@ class AddQueryView(TemplateView): #This view will render a form for the user to 
                 if name and description and query:
                     q = Query(name = name, description = description, query = query)
                     q.save()
-                    return HttpResponseRedirect('/')
-
+                    return HttpResponseRedirect(reverse('results_url', args=(q.id,)))
 
             return render(request, 'add_query.html', {'form' : form})
             

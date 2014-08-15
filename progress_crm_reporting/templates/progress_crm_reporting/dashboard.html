@@ -1,0 +1,19 @@
+{% extends "admin_tools/dashboard/module.html" %}
+
+{% load staticfiles %}
+        <!-- This is the pathway to the static file folder -->
+{% block module_content %}
+        <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
+
+        <div class = "banner"> 
+            <!-- The banner is the header at the top that contains the green block backgrond -->
+            <h1> 
+                <!-- the <h1> is wrapped within the div so that the text is included within the banner's background -->
+                ProgressCRM
+            </h1>
+        </div>
+        
+        <div class="content-target">
+            {% include "progress_crm_reporting/query_list.html" %}
+        </div>
+{% endblock %}

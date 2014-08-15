@@ -1,0 +1,25 @@
+<h2>Add New Query</h2>
+        
+<center>
+    <!-- the center ensures that the objects within the <center> tag in the html are centered in the middle of the page -->
+    
+    <form class="add_query_form" role="form" action="{% url "add_query_url" %}" method = "post">
+    <!-- this is the pulling from forms.py and gives it a pathway to query.models -->
+        {% csrf_token %}
+        <!-- security feauture to prevent hacking through forms -->
+        {{ form.name.errors }}
+        {{ form.name }}<br />
+        {{ form.description.errors }}
+        {{ form.description }}<br />
+        {{ form.query.errors }}
+        {{ form.query }}<br />
+        <!-- this one is <textarea placeholder> to allow more text and have the text wrapped so as to facilitate the user experience -->
+        <br>  
+
+        <button class = "exportbtn" type = "submit" value = "OK"> Save </button>
+        <!-- this button submits entries into the database, however at this momeent, this button takes the user back to the home page while we create a feauture that will cause error messages when parts are left black or filled incorrectly-->
+    </form>
+    <a href='/'>  <button class = "cancelbtn"> Cancel</button></a><!-- this button connects you back to the index.html-->
+      
+    
+</center>
